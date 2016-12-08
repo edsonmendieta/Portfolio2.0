@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  margin: 0;
   width: 100%;
   height: 100%;
   background-color: #0093A3;
@@ -21,7 +22,6 @@ body {
   color: white;
   margin-bottom: 0;
   padding: 0;
-  width: 100%;
   font-family: 'Poppins';
   font-size: 600%;
   font-weight: normal;
@@ -34,7 +34,6 @@ body {
   color: white;
   margin: 0;
   padding: 0;
-  width: 100%;
   margin-bottom: 75px;
   font-family: 'Poppins';
   font-size: 125%;
@@ -130,7 +129,8 @@ body {
 @keyframes squareBefore {
   0% {}
   25% {
-    border-top-color: white; width: 100%;
+    border-top-color: white;
+    width: 100%;
     border-right-color: transparent; height: 0;
   }
   50% {
@@ -329,3 +329,36 @@ body {
 }
 
 /*********************************************/
+
+
+/***********************************
+                FOOTER
+***********************************/
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.iconContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+}
+
+#email {
+    display: inline-block;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#copy {
+    display: inline-block;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
