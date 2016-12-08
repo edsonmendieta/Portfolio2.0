@@ -91,6 +91,10 @@ body {
   height: 150px;
 }
 
+.innerBox {
+    width: 150px;
+}
+
 .outerBox::before {
   box-sizing: border-box;
   position: absolute;
@@ -170,6 +174,8 @@ body {
 
 
 .calc {
+    display: block;
+    margin: 0 auto; /* centered inside '.innerBox' */
   color: white;
   text-align: center;
   width: 100px;
@@ -199,6 +205,9 @@ body {
 }
 
 .project {
+    width: 100px;
+    margin: 0 auto; /* centered inside '.innerBox' */
+    text-align: center;
   color: white;
   font-family: 'Lobster Two';
   opacity: 0;
