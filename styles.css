@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers|Cabin|Enriqueta|Lobster|Lobster+Two|Montserrat|Montserrat+Alternates|Nova+Script|Oswald|Raleway|Slabo+27px');
+
+@import url('https://fonts.googleapis.com/css?family=Hind+Vadodara');
+
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0093A3;
+}
+
+
+#firstN {
+  color: white;
+  margin-bottom: 0;
+  padding: 0;
+  width: 100%;
+  font-family: 'Poppins';
+  font-size: 600%;
+  font-weight: normal;
+  height: 120px;
+  padding-left: 5%;
+
+}
+
+#lastN {
+  color: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  margin-bottom: 75px;
+  font-family: 'Poppins';
+  font-size: 125%;
+  font-weight: normal;
+  padding-left: 22%;
+}
+
+#tagline {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: 'Lobster Two';
+  font-weight: normal;
+  font-size: 200%;
+  margin-bottom: 75px;
+}
+
+
+.allBox1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+.allBox2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+
+#mid1 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#mid2 {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.outerBox {
+  border: 0;
+  box-sizing: border-box;
+  position:relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+}
+
+.outerBox::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.outerBox::after {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.outerBox:hover {
+  cursor: pointer;
+}
+
+/********************************************
+
+              $BORDER-ANIMATION
+
+********************************************/
+
+@keyframes squareBefore {
+  0% {}
+  25% {
+    border-top-color: white; width: 100%;
+    border-right-color: transparent; height: 0;
+  }
+  50% {
+    border-right-color: white; height: 100%;
+  }
+  75% {}
+  100% {
+    border-top-color: white; width: 100%;
+    border-right-color: white; height: 100%;
+  }
+}
+
+@keyframes squareAfter {
+  0%{}
+  25%{}
+  50%{
+    border-bottom-color: transparent; width: 0;
+  }
+  75%{
+    border-bottom-color: white; width: 100%;
+    border-left-color: transparent; height: 0;
+  }
+  100%{
+    border-bottom-color: white; width: 100%;
+    border-left-color: white; height: 100%;
+  }
+
+}
+
+
+.outerBox:hover::before {
+  animation: squareBefore .5s linear forwards;
+}
+
+.outerBox:hover::after {
+  animation: squareAfter .5s linear forwards;
+}
+
+/*********************************************/
+
+
+
+.calc {
+  color: white;
+  text-align: center;
+  width: 100px;
+  padding-bottom: 10px;
+/*   border-style: solid;
+  border-width: 1px;
+  border-color: transparent; */
+/*   border-bottom: 0 solid transparent; */
+
+}
+
+.calc::after { /* From middle out, line */
+  content: ''; /* It now exists */
+	display: block; /* Places it under icon */
+	margin: auto; /* centers it with equal margin on both sides*/
+	height: 1px; /* Thickness */
+	width: 0px;
+  margin-top: 10px;
+	transition: width .5s ease, background-color .5s ease;
+}
+
+
+
+.outerBox:hover .calc::after {
+	width: 100%; /* now expands equally to left & right */
+	background: white; /* visibility */
+}
+
+.project {
+  color: white;
+  font-family: 'Lobster Two';
+  opacity: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.outerBox:hover .project {
+  opacity: 1;
+}
+
+
+
+
+/********************************************
+
+              $1st-in-ROW Styles
+(buggy animation when using styles for other 4 icon-boxes)
+
+********************************************/
+
+
+.outBox {
+  border: 0;
+  box-sizing: border-box;
+  position:relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 150px;
+}
+
+.outBox::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+}
+
+.outBox::after {
+  box-sizing: border-box;
+  position: absolute;
+  content: '';
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.outBox:hover {
+  cursor: pointer;
+}
+
+.outBox:hover .calc::after {
+	width: 100%; /* now expands equally to left & right */
+	background: white; /* visibility */
+}
+
+.outBox:hover .project {
+  opacity: 1;
+}
+
+
+
+
+/********************************************
+
+              $1st-in-ROW Border-ANIMATION
+
+********************************************/
+
+@keyframes squareBefore2 {
+  0% {}
+  25% {
+    border-top-color: white; width: 100%;
+    border-right-color: transparent; height: 0;
+  }
+  50% {
+    border-right-color: white; height: 100%;
+  }
+  75% {}
+  100% {
+    border-top-color: white; width: 100%;
+    border-right-color: white; height: 100%;
+  }
+}
+
+@keyframes squareAfter2 {
+  0%{}
+  25%{}
+  50%{
+    border-bottom-color: transparent; width: 0;
+  }
+  75%{
+    border-bottom-color: white; width: 100%;
+    border-left-color: transparent; height: 0;
+  }
+  100%{
+    border-bottom-color: white; width: 100%;
+    border-left-color: white; height: 100%;
+  }
+
+}
+
+
+.outBox:hover::before {
+  animation: squareBefore2 .5s linear forwards;
+}
+
+.outBox:hover::after {
+  animation: squareAfter2 .5s linear forwards;
+}
+
+/*********************************************/
